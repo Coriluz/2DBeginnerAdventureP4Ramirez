@@ -16,12 +16,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         horizontal = Input.GetAxis("Horizontal");
-         vertical = Input.GetAxis("Vertical");
-        
-        Vector2 position = transform.position;
-        position.x = position.x + 5.0f * horizontal * Time.deltaTime;
-        position.y = position.y + 5.0f * vertical * Time.deltaTime;
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
+
+
+
+    }   
         void FixedUpdate()
     {
             Vector2 position = rigidbody2d.position;
@@ -33,4 +33,4 @@ public class PlayerController : MonoBehaviour
 
 
     }
-}
+
