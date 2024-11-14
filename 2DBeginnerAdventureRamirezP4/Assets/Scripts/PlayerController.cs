@@ -60,9 +60,9 @@ public class PlayerController : MonoBehaviour
         {
             Launch();
         }
-        {
+        
 
-        }
+        
     }   
         void FixedUpdate()
     {
