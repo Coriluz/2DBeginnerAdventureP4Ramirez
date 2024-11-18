@@ -43,6 +43,7 @@ public class EnemyController : MonoBehaviour
         if(!broken)
         {
             return;
+
         }
         Vector2 position = rigidbody2d.position;
         if(verticle)
