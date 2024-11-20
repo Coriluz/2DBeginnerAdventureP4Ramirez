@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float speed = 3.0f;
-    public bool verticle;
+    public bool vertical;
     public float changeTime = 3.0f;
     Rigidbody2D rigidbody2d;
 
@@ -26,27 +26,25 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!broken)
-        {
-            return;
-        }
 
-        timer -= Time.deltaTime; 
+
+
+        timer -= Time.deltaTime;
         if (timer < 0)
         {
             direction = -direction;
             timer = changeTime;
         }
     }
-     void FixedUpdate()
+    void FixedUpdate()
     {
-        if(!broken)
+        if (!broken)
         {
             return;
 
         }
         Vector2 position = rigidbody2d.position;
-        if(verticle)
+        if (vertical)
         {
             animator.SetFloat("Move X", 0);
             animator.SetFloat("Move Y", direction);
@@ -59,18 +57,18 @@ public class EnemyController : MonoBehaviour
             animator.SetFloat("Move Y", 0);
             position.x = position.x + Time.deltaTime * speed * direction;
         }
-      
+
 
         rigidbody2d.MovePosition(position);
     }
-     void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
             player.ChangeHealth(-1);
         }
-    }   
+    }
     public void Fix()
     {
 
@@ -79,6 +77,6 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
     }
 }
-    
+
 
 
