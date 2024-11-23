@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: -9.33, y: 1.32, z: 0}
   m_LocalScale: {x: 1.4383, y: 1.5253, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3989469608804718644}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2016709938996067463
@@ -173,8 +174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  verticle: 0
+  vertical: 0
   changeTime: 3
+  smokeEffect: {fileID: 8442823883550173854}
 --- !u!95 &8480715789798951448
 Animator:
   serializedVersion: 5
@@ -196,3 +198,83 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &8508995614933908290
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5803935925161986591}
+    m_Modifications:
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.416
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750019627070696645, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+        type: 3}
+      propertyPath: m_Name
+      value: SmokeEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 733ed5912f46f4a4c80405d0b7b93d61, type: 3}
+--- !u!4 &3989469608804718644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4704985167871632246, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+    type: 3}
+  m_PrefabInstance: {fileID: 8508995614933908290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8442823883550173854 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 233318544145437148, guid: 733ed5912f46f4a4c80405d0b7b93d61,
+    type: 3}
+  m_PrefabInstance: {fileID: 8508995614933908290}
+  m_PrefabAsset: {fileID: 0}
